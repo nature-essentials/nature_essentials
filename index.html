@@ -8,17 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/cart.js"></script>
+  <script src="js/navbar.js" defer></script>
 </head>
-<body>
+<body data-page="index">
   <!-- Header -->
-  <header class="site-header container">
-    <a class="logo" href="index.html">Nature Essentials</a>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html" class="cart-link">Cart <span class="badge" id="cart-count">0</span></a>
-    </nav>
-  </header>
+  <div id="navbar"></div>
 
   <!-- Hero (light, typographic) -->
   <section class="hero-plain">
@@ -94,28 +88,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="logo" href="index.html">Your Shop</a>
-        <p class="muted">Nature-first skincare. Made with care.</p>
-      </div>
-      <!-- <div>
-        <h4>Newsletter</h4>
-        <form id="newsletter-form" class="newsletter">
-          <input type="email" placeholder="Email address" required />
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-        </form>
-      </div> -->
-      <div>
-        <h4>Follow</h4>
-        <div class="socials">
-          <a aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" fill="currentColor"/></svg></a>
-          <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13 22V12h3l1-4h-4V6a2 2 0 0 1 2-2h2V0h-3a5 5 0 0 0-5 5v3H6v4h3v10h4z" fill="currentColor"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="container tiny muted">© <span id="year"></span> Nature Essentials. All rights reserved.</div>
-  </footer>
+  <div id="footer"></div>
+  <script src="js/footer.js" defer></script>
 </body>
 </html>

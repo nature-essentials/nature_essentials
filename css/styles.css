@@ -194,6 +194,37 @@ input:focus{ border-color: var(--accent-2) }
 .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:1rem }
 @media (max-width: 700px){ .grid-2{ grid-template-columns:1fr } }
 
+/* Hidden description styles */
+.product-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.product-desc.open {
+  max-height: 300px; /* Adjust based on expected content */
+  opacity: 1;
+  padding-top: 0.5rem;
+}
+
+/* Optional: Style the toggle button */
+.toggle-desc {
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.toggle-desc:hover {
+  color: #222;
+}
+
+
 /* Footer */
 .site-footer{
   margin-top:3rem; background:var(--tint); padding:2rem 0;

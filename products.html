@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Products — Your Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/cart.js"></script>
+  <script src="js/navbar.js" defer></script>
 </head>
-<body>
-  <header class="site-header container">
-    <a class="logo" href="index.html">Your Shop</a>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="cart.html" class="cart-link">Cart <span class="badge" id="cart-count">0</span></a>
-    </nav>
-  </header>
 
+<body data-page="products">
+  <div id="navbar"></div>
   <section class="container section-compact">
     <h1 class="page-title">Our Collection</h1>
     <p class="muted center">Elevated basics for daily care. Add to cart and pay on delivery.</p>
@@ -31,6 +28,15 @@
         <h3>Organic Honey Cleanser</h3>
         <p class="price">$18</p>
         <button class="btn btn-primary" onclick="addToCart('Organic Honey Cleanser', 18)">Add to Cart</button>
+
+        <!-- Toggle Button -->
+        <button class="toggle-desc" onclick="toggleDesc(this)">Details</button>
+
+        <!-- Hidden Description -->
+        <div class="product-desc">
+          <p>This gentle cleanser is infused with raw honey and calendula. Perfect for daily use, it soothes and
+            hydrates while cleansing.</p>
+        </div>
       </div>
     </article>
     <!-- Product 2 -->
@@ -54,8 +60,8 @@
     <!-- Add more as needed -->
   </section>
 
-  <footer class="site-footer">
-    <div class="container tiny muted">© <span id="year"></span> Your Shop</div>
-  </footer>
+  <div id="footer"></div>
+  <script src="js/footer.js" defer></script>
 </body>
+
 </html>
