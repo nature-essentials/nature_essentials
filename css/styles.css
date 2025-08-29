@@ -1,0 +1,216 @@
+/* ------------------------------
+   Theme
+------------------------------ */
+:root{
+  --bg:#fbfaf8;
+  --paper:#ffffff;
+  --tint:#f4f1ec;      /* soft beige section bg */
+  --ink:#1f1f1f;
+  --muted:#6f6f6f;
+  --accent:#637a54;    /* sage */
+  --accent-2:#a7b79a;  /* lighter sage */
+  --radius:14px;
+  --shadow:0 6px 22px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+}
+img{max-width:100%; display:block}
+
+/* Containers & spacing */
+.container{width:min(1120px, 92%); margin-inline:auto}
+.section-spacious{padding:5rem 0}
+.section-compact{padding:2.5rem 0}
+.section-tint{background:var(--tint); padding:4rem 0}
+.center{text-align:center}
+.lead{font-size:1.2rem; color:var(--muted); max-width:820px; margin:1rem auto}
+
+/* Typography */
+h1,h2,h3,h4,h5{
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing:.2px;
+  color:var(--ink);
+  margin:0 0 .75rem 0;
+}
+.page-title{font-size:2.4rem; text-align:center}
+.section-title{font-size:2rem; text-align:center}
+.muted{color:var(--muted)}
+.tiny{font-size:.9rem}
+
+/* Header */
+.site-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.25rem 0;
+}
+.logo{
+  font-family:'Playfair Display', Georgia, serif;
+  font-weight:700; font-size:1.4rem; text-decoration:none; color:var(--ink);
+}
+.nav a{
+  text-decoration:none; color:var(--ink); margin-left:1.25rem;
+  position:relative;
+}
+.nav a.active{font-weight:700}
+.cart-link{display:inline-flex; align-items:center; gap:.5rem}
+.badge{
+  display:inline-grid; place-items:center;
+  min-width:22px; height:22px; padding:0 .25rem;
+  background:var(--accent); color:white; border-radius:999px; font-size:.8rem;
+}
+
+/* Hero (light, typographic) */
+.hero-plain{
+  background:var(--paper);
+  border-radius:calc(var(--radius) + 6px);
+  margin:1rem auto 0 auto;
+}
+.hero-inner{ padding:8rem 0; text-align:center }
+.hero-title{
+  font-size:3.2rem; line-height:1.1; margin-bottom:1rem;
+}
+.hero-sub{ color:var(--muted); font-size:1.1rem; margin-bottom:2rem }
+
+/* Buttons */
+.btn{
+  display:inline-block; padding:.9rem 1.5rem; border-radius:999px;
+  text-decoration:none; cursor:pointer; transition:transform .08s ease, background .2s ease, border-color .2s ease;
+  border:1.5px solid transparent;
+}
+.btn:hover{ transform:translateY(-1px) }
+.btn-primary{ background:var(--accent); color:#fff }
+.btn-primary:hover{ background:#4f6143 }
+.btn-outline{ background:transparent; border-color:var(--accent); color:var(--accent) }
+.btn-outline:hover{ background:var(--accent); color:#fff }
+.full{ width:100% }
+
+/* Features */
+.features-grid{
+  display:grid; gap:1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.feature-card{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.75rem; text-align:center;
+}
+.feature-card .icon{
+  width:40px; height:40px; margin:0 auto .75rem auto; color:var(--accent);
+}
+.feature-card .icon svg{width:100%; height:100%}
+
+/* Split sections */
+.split{
+  display:grid; gap:2rem;
+  grid-template-columns: 1.1fr 1fr;
+  align-items:center;
+}
+.split-media img{
+  border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.split .section-title{ text-align:left }
+@media (max-width: 900px){
+  .split{ grid-template-columns:1fr; }
+  .split .section-title{ text-align:center }
+}
+
+/* Founder */
+.founder blockquote{
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:1.2rem; color:var(--ink);
+  margin:0 0 .75rem 0;
+}
+.founder-name{ color:var(--muted) }
+
+/* Products grid */
+.products-grid{
+  padding-bottom:4rem;
+  display:grid; gap:1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.product-card{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
+  overflow:hidden; display:flex; flex-direction:column;
+}
+.product-card img{ aspect-ratio: 4/3; object-fit:cover }
+.product-info{ padding:1rem }
+.product-info h3{ font-size:1.2rem; margin-bottom:.25rem }
+.price{ color:var(--ink); font-weight:700; margin:.25rem 0 1rem }
+
+/* Cart page */
+.cart-wrap{
+  display:grid; gap:2rem;
+  grid-template-columns: 1.6fr .9fr;
+}
+.cart-items{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1rem;
+}
+.cart-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.75rem 0; border-bottom:1px solid #eee;
+}
+.cart-row:last-child{ border-bottom:none }
+.cart-item-name{ font-weight:700 }
+.cart-item-controls{
+  display:flex; align-items:center; gap:1rem;
+}
+.qty{
+  display:flex; align-items:center; gap:.5rem; color:var(--muted);
+}
+.qty input{
+  width:70px; padding:.5rem .6rem; border-radius:10px; border:1px solid #ddd;
+}
+.link{ background:transparent; border:none; color:var(--accent); cursor:pointer; padding:.35rem .5rem; border-radius:8px }
+.link:hover{ background: #e8efe3 }
+.link.danger{ color:#b24b4b }
+.link.danger:hover{ background:#f7eaea }
+
+.cart-summary{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.25rem; height:max-content;
+}
+.summary-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.35rem 0;
+}
+.summary-row.total{ font-size:1.1rem }
+
+/* Forms */
+.checkout-form{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.25rem;
+}
+input{
+  width:100%; padding:.9rem 1rem; border:1px solid #ddd; border-radius:12px;
+  background:#fff; outline:none; transition:border-color .2s ease;
+}
+input:focus{ border-color: var(--accent-2) }
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:1rem }
+@media (max-width: 700px){ .grid-2{ grid-template-columns:1fr } }
+
+/* Footer */
+.site-footer{
+  margin-top:3rem; background:var(--tint); padding:2rem 0;
+}
+.footer-grid{
+  display:grid; gap:1.25rem;
+  grid-template-columns:1.2fr 1fr 1fr;
+  align-items:start;
+}
+.newsletter{ display:flex; gap:.6rem; margin-top:.5rem }
+.newsletter input{ flex:1 }
+.socials a{ display:inline-flex; width:28px; height:28px; margin-right:.4rem; color:var(--ink) }
+.socials svg{ width:100%; height:100% }
+@media (max-width: 900px){
+  .footer-grid{ grid-template-columns:1fr; }
+}
+
+/* Utilities */
+hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
+.empty{ padding:1rem; color:var(--muted) }

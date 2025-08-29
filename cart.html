@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart — Your Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/cart.js"></script>
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="index.html">Your Shop</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html" class="active cart-link">Cart <span class="badge" id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <section class="container section-compact">
+    <h1 class="page-title">Your Cart</h1>
+  </section>
+
+  <section class="container cart-wrap">
+    <div class="cart-items" id="cart-items"></div>
+
+    <aside class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0</strong>
+      </div>
+      <div class="summary-row tiny muted">
+        <span>Delivery</span>
+        <span>Cash on Delivery</span>
+      </div>
+      <hr />
+      <div class="summary-row total">
+        <span>Total</span>
+        <strong id="cart-total">$0</strong>
+      </div>
+      <p class="tiny muted">You’ll see all items and total before placing the order.</p>
+    </aside>
+  </section>
+
+  <section class="container section-compact">
+    <h2 class="section-title">Checkout</h2>
+    <form id="checkout-form" class="checkout-form">
+      <div class="grid-2">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+      </div>
+      <input type="text" name="address" placeholder="Address" required />
+      <input type="email" name="email" placeholder="Email (for confirmation)" required />
+      <button type="submit" class="btn btn-primary full">Place Order</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container tiny muted">© <span id="year"></span> Your Shop</div>
+  </footer>
+</body>
+</html>

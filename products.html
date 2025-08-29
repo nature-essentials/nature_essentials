@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products — Your Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/cart.js"></script>
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="index.html">Your Shop</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html" class="cart-link">Cart <span class="badge" id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <section class="container section-compact">
+    <h1 class="page-title">Our Collection</h1>
+    <p class="muted center">Elevated basics for daily care. Add to cart and pay on delivery.</p>
+  </section>
+
+  <section class="container products-grid">
+    <!-- Product 1 -->
+    <article class="product-card">
+      <img src="images/product1.jpg" alt="Organic Honey Cleanser" />
+      <div class="product-info">
+        <h3>Organic Honey Cleanser</h3>
+        <p class="price">$18</p>
+        <button class="btn btn-primary" onclick="addToCart('Organic Honey Cleanser', 18)">Add to Cart</button>
+      </div>
+    </article>
+    <!-- Product 2 -->
+    <article class="product-card">
+      <img src="images/product2.jpg" alt="Herbal Tea Toner" />
+      <div class="product-info">
+        <h3>Herbal Tea Toner</h3>
+        <p class="price">$14</p>
+        <button class="btn btn-primary" onclick="addToCart('Herbal Tea Toner', 14)">Add to Cart</button>
+      </div>
+    </article>
+    <!-- Product 3 -->
+    <article class="product-card">
+      <img src="images/product3.jpg" alt="Natural Soap Bar" />
+      <div class="product-info">
+        <h3>Natural Soap Bar</h3>
+        <p class="price">$8</p>
+        <button class="btn btn-primary" onclick="addToCart('Natural Soap Bar', 8)">Add to Cart</button>
+      </div>
+    </article>
+    <!-- Add more as needed -->
+  </section>
+
+  <footer class="site-footer">
+    <div class="container tiny muted">© <span id="year"></span> Your Shop</div>
+  </footer>
+</body>
+</html>

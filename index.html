@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nature Essentials — Natural Remedies</title>
+  <!-- Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/cart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header container">
+    <a class="logo" href="index.html">Nature Essentials</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html" class="cart-link">Cart <span class="badge" id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <!-- Hero (light, typographic) -->
+  <section class="hero-plain">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Celebrate Your Natural Beauty</h1>
+      <p class="hero-sub">Thoughtful formulas, plant-powered ingredients, and gentle care for every skin type.</p>
+      <a class="btn btn-primary" href="products.html">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="container section-spacious center">
+    <h2 class="section-title">Our Vision</h2>
+    <p class="lead">
+      We believe skincare should nourish, not mask. Every product is crafted with care, balancing tradition and science — always kind to your skin and the planet.
+    </p>
+  </section>
+
+  <!-- Features / Values -->
+  <section class="section-tint">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="icon">
+          <!-- leaf -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21s7-1 10.5-4.5S20 7 20 3c-4 0-9.5 2.5-13 6S5 21 5 21z" fill="currentColor"/></svg>
+        </div>
+        <h3>Natural Ingredients</h3>
+        <p>Plant-based, skin-loving, and selected for purity.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">
+          <!-- recycle -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6l2-3 2 3M7 6H3l2 3m6 9l-2 3-2-3m4 0h4l-2-3M17 6l2 3h4l-2-3-2-3-2 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Eco-Friendly</h3>
+        <p>Responsible sourcing and minimal packaging.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">
+          <!-- sparkles -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3zM5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14zm14 1l1.1 2.6L23 19l-2.9 1.4L19 23l-1.1-2.6L15 19l2.9-1.4L19 15z" fill="currentColor"/></svg>
+        </div>
+        <h3>Gentle & Effective</h3>
+        <p>Balanced formulas that deliver visible results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection teaser -->
+  <section class="container section-spacious split">
+    <div class="split-media">
+      <img src="images/hero.jpg" alt="Natural collection" />
+    </div>
+    <div class="split-content">
+      <h2 class="section-title">Best-Loved Essentials</h2>
+      <p>Discover our customer favorites — simple rituals, lasting glow.</p>
+      <a class="btn btn-outline" href="products.html">Explore Products</a>
+    </div>
+  </section>
+
+  <!-- Founder (two-column) -->
+  <section class="section-tint">
+    <div class="container split founder">
+      <div class="split-media">
+        <img src="images/founder.jpg" alt="Founder portrait" />
+      </div>
+      <div class="split-content">
+        <h2 class="section-title">Meet the Founder</h2>
+        <blockquote>“Everything I create goes on my own skin first. You deserve gentle, honest care that truly supports your natural beauty.”</blockquote>
+        <p class="founder-name">— Radica, Founder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">Your Shop</a>
+        <p class="muted">Nature-first skincare. Made with care.</p>
+      </div>
+      <!-- <div>
+        <h4>Newsletter</h4>
+        <form id="newsletter-form" class="newsletter">
+          <input type="email" placeholder="Email address" required />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div> -->
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" fill="currentColor"/></svg></a>
+          <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13 22V12h3l1-4h-4V6a2 2 0 0 1 2-2h2V0h-3a5 5 0 0 0-5 5v3H6v4h3v10h4z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container tiny muted">© <span id="year"></span> Nature Essentials. All rights reserved.</div>
+  </footer>
+</body>
+</html>
