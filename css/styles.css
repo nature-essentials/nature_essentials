@@ -383,13 +383,6 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
 .product-desc.open {
   display: block;
 }
-
-
-
-
-
-
-
 .checkout-form {
   max-width: 700px;
   margin: 30px auto;
@@ -429,4 +422,43 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
 
 .checkout-form button:hover {
   background: #3a512b;
+}
+
+/* Background for features section */
+.features-bg {
+  background-image: url("../images/vision-bg.png"); /* change to your image */
+  background-attachment: fixed;   /* keeps it fixed */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Slight overlay to improve text readability */
+.features-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent white overlay */
+  z-index: -1;
+}
+
+/* Ensure cards appear above overlay */
+.features-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
 }
