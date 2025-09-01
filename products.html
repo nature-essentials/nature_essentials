@@ -9,8 +9,10 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/cart.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/cart.js" defer ></script>
   <script src="js/navbar.js" defer></script>
+
 </head>
 
 <body data-page="products">
@@ -20,45 +22,8 @@
     <p class="muted center">Elevated basics for daily care. Add to cart and pay on delivery.</p>
   </section>
 
-  <section class="container products-grid">
-    <!-- Product 1 -->
-    <article class="product-card">
-      <img src="images/product1.jpg" alt="Organic Honey Cleanser" />
-      <div class="product-info">
-        <h3>Organic Honey Cleanser</h3>
-        <p class="price">$18</p>
-        <button class="btn btn-primary" onclick="addToCart('Organic Honey Cleanser', 18)">Add to Cart</button>
+  <div id="products-container" class="products-grid"></div>
 
-        <!-- Toggle Button -->
-        <button class="toggle-desc" onclick="toggleDesc(this)">Details</button>
-
-        <!-- Hidden Description -->
-        <div class="product-desc">
-          <p>This gentle cleanser is infused with raw honey and calendula. Perfect for daily use, it soothes and
-            hydrates while cleansing.</p>
-        </div>
-      </div>
-    </article>
-    <!-- Product 2 -->
-    <article class="product-card">
-      <img src="images/product2.jpg" alt="Herbal Tea Toner" />
-      <div class="product-info">
-        <h3>Herbal Tea Toner</h3>
-        <p class="price">$14</p>
-        <button class="btn btn-primary" onclick="addToCart('Herbal Tea Toner', 14)">Add to Cart</button>
-      </div>
-    </article>
-    <!-- Product 3 -->
-    <article class="product-card">
-      <img src="images/product3.jpg" alt="Natural Soap Bar" />
-      <div class="product-info">
-        <h3>Natural Soap Bar</h3>
-        <p class="price">$8</p>
-        <button class="btn btn-primary" onclick="addToCart('Natural Soap Bar', 8)">Add to Cart</button>
-      </div>
-    </article>
-    <!-- Add more as needed -->
-  </section>
 
   <div id="footer"></div>
   <script src="js/footer.js" defer></script>

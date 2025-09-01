@@ -13,7 +13,7 @@ function saveCart(cart) {
   updateCartCount();
 }
 function formatCurrency(n) {
-  return `$${Number(n).toFixed(2)}`;
+  return `${Number(n).toFixed(0)} ден`; 
 }
 
 /* Header badge count */
@@ -31,8 +31,21 @@ function addToCart(name, price) {
   if (found) found.qty += 1;
   else cart.push({ name, price: Number(price), qty: 1 });
   saveCart(cart);
-  // Toast-y alert without blocking UX
-  alert(`${name} added to cart`);
+
+  // Instead of alert, show a toast
+  showToast(`${name} додадено во кошничка 🛒`);
+}
+
+function showToast(message) {
+  let toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.classList.add("show"), 50);
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.addEventListener("transitionend", () => toast.remove());
+  }, 2500);
 }
 
 /* Remove item */
@@ -49,7 +62,7 @@ function setQty(name, qty) {
   const item = cart.find(i => i.name === name);
   if (item) item.qty = qty;
   saveCart(cart);
-  renderCartTotals();
+  renderCart();
 }
 
 /* Render cart list (cart.html) */
