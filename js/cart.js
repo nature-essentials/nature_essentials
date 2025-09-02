@@ -187,6 +187,7 @@ function handleCheckout() {
     const name = data.get("name")?.toString().trim();
     const phone = data.get("phone")?.toString().trim();
     const address = data.get("address")?.toString().trim();
+    const town = data.get("town")?.toString().trim();
     const email = data.get("email")?.toString().trim();
 
     const orderId = `NE-${Date.now().toString().slice(-6)}`;
@@ -206,7 +207,7 @@ function handleCheckout() {
       order_id: orderId,
       customer_name: name,
       customer_phone: phone,
-      customer_address: address,
+      customer_address: address + town,
       customer_email: email,
       cost: {
         subtotal: orderTotal,

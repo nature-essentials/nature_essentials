@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="product-info">
             <h3>${p.name}</h3>
             <p class="price">${formatPrice(p.price)}</p>
-            <button class="btn btn-primary" onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
+            <button class="btn btn-primary" onclick="addToCart('${p.name}', ${p.price}, '${p.image}')">Add to Cart</button>
             <button class="toggle-desc" onclick="toggleDesc(this)">Details</button>
             <div class="product-desc">
               <p>${p.description}</p>
