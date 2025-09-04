@@ -75,38 +75,33 @@ function showToast(message) {
 }
 
 // -----------------------------
-// Load products from JSON
+// Inject JSON-LD Schema
 // -----------------------------
-// document.addEventListener("DOMContentLoaded", () => {
-//   fetch("json/products.json")
-//     .then((res) => res.json())
-//     .then((products) => {
-//       const container = document.getElementById("products-container");
-//       container.innerHTML = "";
+function injectProductSchema(products) {
+  const schema = products.map(p => ({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": p.name,
+    "image": window.location.origin + "/" + p.image,
+    "description": p.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Nature Essentials"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": window.location.origin + "/products.html",
+      "priceCurrency": "MKD",
+      "price": p.price,
+      "availability": "https://schema.org/InStock"
+    }
+  }));
 
-//       products.forEach((p) => {
-//         const card = document.createElement("article");
-//         card.className = "product-card";
-//         card.innerHTML = `
-//           <img src="${p.image}" alt="${p.name}" />
-//           <div class="product-info">
-//             <h3>${p.name}</h3>
-//             <p class="price">${formatPrice(p.price)}</p>
-//             <button class="btn btn-primary" onclick="addToCart('${p.name}', ${p.price}, '${p.image}')">Add to Cart</button>
-//             <button class="btn btn-secondary" onclick='openModal(${JSON.stringify(p)})'>Details</button>
-//             <div class="product-desc">
-//               <p>${p.description}</p>
-//             </div>
-//           </div>
-//         `;
-//         container.appendChild(card);
-//       });
-//     })
-//     .catch((err) => {
-//       console.error("Error loading products:", err);
-//     });
-// });
-
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(schema, null, 2);
+  document.head.appendChild(script);
+}
 
 // -----------------------------
 // Load products from JSON (fixed)
@@ -135,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
 
-        // Attach event listeners (instead of inline onclick)
+        // Attach event listeners
         card.querySelector(".btn-primary").addEventListener("click", () => {
           addToCart(p.name, p.price, p.image);
         });
@@ -146,12 +141,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.appendChild(card);
       });
+      injectProductSchema(products);
     })
     .catch((err) => {
       console.error("Error loading products:", err);
     });
 });
 
+// -----------------------------
+// Show details (mobile / desktop)
+// -----------------------------
 
 function showDetails(button, product) {
   if (window.innerWidth <= 768) {
