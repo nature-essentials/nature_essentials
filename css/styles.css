@@ -464,7 +464,7 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
   text-align: center;
 }
 /* Modal background */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -474,7 +474,7 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
   justify-content: center;
   align-items: center;
   padding: 1rem;
-}
+} */
 
 /* Modal box */
 .modal-content {
@@ -491,24 +491,24 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
 }
 
 /* Image */
-.modal-content img {
+/* .modal-content img {
   max-width: 100%;
   max-height: 300px;
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
-}
+} */
 
 /* Title + text */
-.modal-content h2 {
+/* .modal-content h2 {
   margin: 0.5rem 0;
 }
 .modal-content p {
   margin: 0.25rem 0;
-}
+} */
 
 /* Close button */
-.close-btn {
+/* .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -518,9 +518,9 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
 }
 .close-btn:hover {
   color: red;
-}
+} */
 /* Modal background */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -530,7 +530,7 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.6);
-}
+} */
 
 /* Modal background */
 
@@ -548,12 +548,12 @@ hr{ border:none; border-top:1px solid #eee; margin:1rem 0 }
 }
 
 /* Center everything inside the modal */
-.modal-content {
+/* .modal-content {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* ← centers children horizontally */
+  align-items: center; 
   text-align: center;
-}
+} */
 
 /* Center the image itself */
 .modal-content img {

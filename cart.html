@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Charset & Viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cart — Your Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Title & Description -->
+  <title>Cart — Nature Essentials</title>
+  <meta name="description"
+    content="Review your selected herbal remedies and natural products before checkout. Secure and simple shopping with Nature Essentials." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://natureessentials.mk/cart.html" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/cart.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/nefavicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/nefavicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/nefavicon.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#4a7c59" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cart — Nature Essentials" />
+  <meta property="og:description" content="Your Nature Essentials cart. Review your order before checkout." />
+  <meta property="og:image" content="https://natureessentials.mk/images/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://natureessentials.mk/cart.html" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cart — Nature Essentials" />
+  <meta name="twitter:description" content="Your Nature Essentials cart. Review your order before checkout." />
+  <meta name="twitter:image" content="https://natureessentials.mk/images/logo.png" />
+
+  <!-- Scripts -->
+  <script src="js/cart.js" defer></script>
   <script src="js/navbar.js" defer></script>
-   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    (function(){
-      emailjs.init("_L9jBqEOPda3RClh1"); 
+    (function () {
+      emailjs.init("_L9jBqEOPda3RClh1");
     })();
   </script>
 </head>
+
+
 <body data-page="cart">
   <div id="navbar"></div>
   <section class="container section-compact">
@@ -58,6 +99,7 @@
 
   <div id="footer"></div>
   <script src="js/footer.js" defer></script>
- 
+
 </body>
+
 </html>

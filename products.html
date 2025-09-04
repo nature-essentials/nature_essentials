@@ -2,18 +2,54 @@
 <html lang="en">
 
 <head>
+  <!-- Charset & Viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products — Your Shop</title>
+
+  <!-- Title & Description -->
+  <title>Products — Nature Essentials</title>
+  <meta name="description"
+    content="Browse Nature Essentials products — tinctures, herbal remedies, and natural care made from carefully selected ingredients." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://natureessentials.mk/products.html" />
+
+  <!-- Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/nefavicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/nefavicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/nefavicon.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#4a7c59" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Products — Nature Essentials" />
+  <meta property="og:description" content="Explore herbal remedies and plant-powered care from Nature Essentials." />
+  <meta property="og:image" content="https://natureessentials.mk/images/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://natureessentials.mk/products.html" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Products — Nature Essentials" />
+  <meta name="twitter:description" content="Explore herbal remedies and plant-powered care from Nature Essentials." />
+  <meta name="twitter:image" content="https://natureessentials.mk/images/logo.png" />
+
+  <!-- Scripts -->
   <script src="js/main.js" defer></script>
   <script src="js/cart.js" defer></script>
   <script src="js/navbar.js" defer></script>
-
 </head>
+
 
 <body data-page="products">
   <div id="navbar"></div>
@@ -24,7 +60,7 @@
 
   <div id="products-container" class="products-grid"></div>
   <!-- Product Details Modal -->
-  <div id="product-modal" class="modal">
+  <div id="product-modal" class="modal" style="display: none;">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal()">&times;</span>
       <img id="modal-image" src="" alt="Product image" />

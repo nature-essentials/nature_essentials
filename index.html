@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Charset & Viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nature Essentials — Natural Remedies</title>
-  <!-- Typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Title & Description -->
+  <title>Nature Essentials — Picked from Nature, Brought to You</title>
+  <meta name="description"
+    content="Nature Essentials — picked from nature and brought to you. Thoughtful formulas, plant-powered remedies, and gentle care for every lifestyle." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://natureessentials.mk/" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/cart.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/nefavicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/nefavicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/nefavicon.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#4a7c59" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nature Essentials — Picked from Nature, Brought to You" />
+  <meta property="og:description"
+    content="Thoughtful formulas, plant-powered remedies, and gentle care for every lifestyle." />
+  <meta property="og:image" content="https://natureessentials.mk/images/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://natureessentials.mk/" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nature Essentials — Picked from Nature, Brought to You" />
+  <meta name="twitter:description"
+    content="Thoughtful formulas, plant-powered remedies, and gentle care for every lifestyle." />
+  <meta name="twitter:image" content="https://natureessentials.mk/images/logo.png" />
+
+  <!-- Scripts -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nature Essentials",
+      "url": "https://natureessentials.mk",
+      "logo": "https://natureessentials.mk/images/logo.png",
+      "description": "Picked from nature and brought to you. Plant-powered skincare and natural remedies by Nature Essentials.",
+      "sameAs": [
+        "https://www.facebook.com/p/Nature-Essentials-By-Radisha-100082207740373/",
+        "https://www.instagram.com/nature_essentials_by_radisha/?hl=en",
+      ]
+    }
+  </script>
   <script src="js/navbar.js" defer></script>
+  <script src="js/cart.js" defer></script>
 </head>
+
+
 <body data-page="index">
   <!-- Header -->
   <div id="navbar"></div>
@@ -27,7 +83,8 @@
   <section class="container section-spacious center">
     <h2 class="section-title">Our Vision</h2>
     <p class="lead">
-      We believe skincare should nourish, not mask. Every product is crafted with care, balancing tradition and science — always kind to your skin and the planet.
+      We believe skincare should nourish, not mask. Every product is crafted with care, balancing tradition and science
+      — always kind to your skin and the planet.
     </p>
   </section>
 
@@ -36,24 +93,24 @@
     <div class="container features-grid">
       <div class="feature-card">
         <div class="icon"> -->
-          <!-- leaf -->
-          <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21s7-1 10.5-4.5S20 7 20 3c-4 0-9.5 2.5-13 6S5 21 5 21z" fill="currentColor"/></svg>
+  <!-- leaf -->
+  <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21s7-1 10.5-4.5S20 7 20 3c-4 0-9.5 2.5-13 6S5 21 5 21z" fill="currentColor"/></svg>
         </div>
         <h3>Natural Ingredients</h3>
         <p>Plant-based, skin-loving, and selected for purity.</p>
       </div>
       <div class="feature-card">
         <div class="icon"> -->
-          <!-- recycle -->
-          <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6l2-3 2 3M7 6H3l2 3m6 9l-2 3-2-3m4 0h4l-2-3M17 6l2 3h4l-2-3-2-3-2 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- recycle -->
+  <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6l2-3 2 3M7 6H3l2 3m6 9l-2 3-2-3m4 0h4l-2-3M17 6l2 3h4l-2-3-2-3-2 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Eco-Friendly</h3>
         <p>Responsible sourcing and minimal packaging.</p>
       </div>
       <div class="feature-card">
         <div class="icon"> -->
-          <!-- sparkles -->
-          <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3zM5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14zm14 1l1.1 2.6L23 19l-2.9 1.4L19 23l-1.1-2.6L15 19l2.9-1.4L19 15z" fill="currentColor"/></svg>
+  <!-- sparkles -->
+  <!-- <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3zM5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14zm14 1l1.1 2.6L23 19l-2.9 1.4L19 23l-1.1-2.6L15 19l2.9-1.4L19 15z" fill="currentColor"/></svg>
         </div>
         <h3>Gentle & Effective</h3>
         <p>Balanced formulas that deliver visible results.</p>
@@ -62,31 +119,40 @@
   </section> -->
 
   <!-- Features / Values with fixed background -->
-<section class="features-bg">
-  <div class="container features-grid">
-    <div class="feature-card">
-      <div class="icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21s7-1 10.5-4.5S20 7 20 3c-4 0-9.5 2.5-13 6S5 21 5 21z" fill="currentColor"/></svg>
+  <section class="features-bg">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 21s7-1 10.5-4.5S20 7 20 3c-4 0-9.5 2.5-13 6S5 21 5 21z" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Natural Ingredients</h3>
+        <p>Plant-based, skin-loving, and selected for purity.</p>
       </div>
-      <h3>Natural Ingredients</h3>
-      <p>Plant-based, skin-loving, and selected for purity.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6l2-3 2 3M7 6H3l2 3m6 9l-2 3-2-3m4 0h4l-2-3M17 6l2 3h4l-2-3-2-3-2 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="feature-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 6l2-3 2 3M7 6H3l2 3m6 9l-2 3-2-3m4 0h4l-2-3M17 6l2 3h4l-2-3-2-3-2 3z" stroke="currentColor"
+              stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3>Eco-Friendly</h3>
+        <p>Responsible sourcing and minimal packaging.</p>
       </div>
-      <h3>Eco-Friendly</h3>
-      <p>Responsible sourcing and minimal packaging.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3zM5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14zm14 1l1.1 2.6L23 19l-2.9 1.4L19 23l-1.1-2.6L15 19l2.9-1.4L19 15z" fill="currentColor"/></svg>
+      <div class="feature-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3zM5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14zm14 1l1.1 2.6L23 19l-2.9 1.4L19 23l-1.1-2.6L15 19l2.9-1.4L19 15z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Gentle & Effective</h3>
+        <p>Balanced formulas that deliver visible results.</p>
       </div>
-      <h3>Gentle & Effective</h3>
-      <p>Balanced formulas that deliver visible results.</p>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Collection teaser -->
@@ -109,7 +175,8 @@
       </div>
       <div class="split-content">
         <h2 class="section-title">Meet the Founder</h2>
-        <blockquote>“Everything I create goes on my own skin first. You deserve gentle, honest care that truly supports your natural beauty.”</blockquote>
+        <blockquote>“Everything I create goes on my own skin first. You deserve gentle, honest care that truly supports
+          your natural beauty.”</blockquote>
         <p class="founder-name">— Radica, Founder</p>
       </div>
     </div>
@@ -119,4 +186,5 @@
   <div id="footer"></div>
   <script src="js/footer.js" defer></script>
 </body>
+
 </html>

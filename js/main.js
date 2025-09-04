@@ -106,8 +106,10 @@ function showToast(message) {
 //       console.error("Error loading products:", err);
 //     });
 // });
+
+
 // -----------------------------
-// Load products from JSON
+// Load products from JSON (fixed)
 // -----------------------------
 document.addEventListener("DOMContentLoaded", () => {
   fetch("json/products.json")
@@ -119,18 +121,29 @@ document.addEventListener("DOMContentLoaded", () => {
       products.forEach((p) => {
         const card = document.createElement("article");
         card.className = "product-card";
+
         card.innerHTML = `
           <img src="${p.image}" alt="${p.name}" />
           <div class="product-info">
             <h3>${p.name}</h3>
             <p class="price">${formatPrice(p.price)}</p>
-            <button class="btn btn-primary" onclick="addToCart('${p.name}', ${p.price}, '${p.image}')">Add to Cart</button>
-            <button class="btn btn-secondary" onclick='showDetails(this, ${JSON.stringify(p)})'>Details</button>
+            <button class="btn btn-primary">Add to Cart</button>
+            <button class="btn btn-secondary">Details</button>
             <div class="product-desc">
               <p>${p.description}</p>
             </div>
           </div>
         `;
+
+        // Attach event listeners (instead of inline onclick)
+        card.querySelector(".btn-primary").addEventListener("click", () => {
+          addToCart(p.name, p.price, p.image);
+        });
+
+        card.querySelector(".btn-secondary").addEventListener("click", (e) => {
+          showDetails(e.target, p);
+        });
+
         container.appendChild(card);
       });
     })
@@ -138,6 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading products:", err);
     });
 });
+
 
 function showDetails(button, product) {
   if (window.innerWidth <= 768) {
